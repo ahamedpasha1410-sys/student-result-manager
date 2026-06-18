@@ -1,36 +1,37 @@
-students = []
+from student import add_student, get_students
+from utils import find_topper, sort_students
 
-def add_student(name, marks):
-    students.append((name, marks))
+def menu():
+    while True:   # LOOP concept
+        print("\n--- Student System ---")
+        print("1. Add Student")
+        print("2. View Students")
+        print("3. Find Topper")
+        print("4. Sort Students")
+        print("5. Exit")
 
-def calculate_result(student):
-    name, marks = student
-    total = sum(marks)
-    average = total / len(marks)
-    return name, total, average
+        choice = input("Enter choice: ")
 
-def display_results():
-    print("\n--- Student Results ---\n")
+        if choice == "1":
+            name = input("Name: ")
+            marks = list(map(int, input("Marks (space separated): ").split()))
+            add_student(name, marks)
 
-    for student in students:
-        name, total, avg = calculate_result(student)
-        print(f"{name} | Total: {total} | Avg: {avg:.2f}")
+        elif choice == "2":
+            for s in get_students():
+                print(s)
 
-def iterator_demo():
-    print("\n--- Iterator Demo ---")
+        elif choice == "3":
+            print("Topper:", find_topper())
 
-    it = iter(students)
+        elif choice == "4":
+            sort_students()
+            print("Sorted!")
 
-    while True:
-        try:
-            student = next(it)
-            print("Processing:", student[0])
-        except StopIteration:
+        elif choice == "5":
             break
 
-add_student("Alice", [85, 90, 88])
-add_student("Bob", [70, 65, 75])
-add_student("Charlie", [95, 92, 96])
+        else:
+            print("Invalid choice")
 
-display_results()
-iterator_demo()
+menu()
