@@ -1,3 +1,10 @@
+SUBJECTS = (
+    "Python",
+    "Database",
+    "Networks",
+    "Cloud"
+)
+
 students = []
 
 
