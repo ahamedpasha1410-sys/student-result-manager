@@ -45,3 +45,4 @@ class StudentCollection:
     def __iter__(self):
 
         return iter(self.students)  
+        return f"{self.student_id} {self.name}"
