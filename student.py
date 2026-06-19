@@ -34,3 +34,15 @@ class Student:
     def display(self):
 
         return f"{self.student_id} {self.name}"
+
+
+class StudentCollection:
+
+    def __init__(self, students):
+
+        self.students = students
+
+    def __iter__(self):
+
+        return iter(self.students)  
+        return f"{self.student_id} {self.name}"
