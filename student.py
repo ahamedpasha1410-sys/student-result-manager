@@ -1,3 +1,21 @@
+students = []
+
+
+def add_student(name, marks):
+
+    student = {
+        "name": name,
+        "marks": marks
+    }
+
+    students.append(student)
+
+
+def get_students():
+
+    return students
+
+
 class Student:
 
     def __init__(self, student_id, name):
