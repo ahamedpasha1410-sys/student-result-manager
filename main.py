@@ -1,9 +1,11 @@
 from student import add_student, get_students
 from utils import find_topper, sort_students
+from student import SUBJECTS
 
 def menu():
     while True:   # LOOP concept
         print("\n--- Student System ---")
+        print("Subjects:", ", ".join(SUBJECTS))
         print("1. Add Student")
         print("2. View Students")
         print("3. Find Topper")
