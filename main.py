@@ -14,21 +14,17 @@ from student import SUBJECTS
 
 def menu():
     while True:   # LOOP concept
-        print("1. Add Student")
-
-        print("2. View Students")
-
-        print("3. Edit Student")
-
-        print("4. Delete Student")
-
-        print("5. Find Topper")
-
-        print("6. Sort Students")
-
-        print("7. Summarize Results")
-
-        print("8. Exit")
+        print(
+    "\n--- Student System ---\n"
+    "1. Add Student\n"
+    "2. View Students\n"
+    "3. Edit Student\n"
+    "4. Delete Student\n"
+    "5. Find Topper\n"
+    "6. Sort Students\n"
+    "7. Summarize Results\n"
+    "8. Exit"
+)
         choice = input("Enter choice: ")
 
         if choice == "1":
