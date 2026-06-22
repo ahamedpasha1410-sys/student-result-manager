@@ -1,4 +1,37 @@
 # 🎓 Student Result Manager
+# Project Scope
+
+The Student Result Manager is a command-line application that helps manage student examination records.
+
+## The application performs the following tasks
+
+* Add student records
+* View student records
+* Edit student information
+* Delete student records
+* Capture examination marks
+* Find class toppers
+* Sort students based on performance
+* Generate result summaries
+* Display subject information
+* Analyze academic performance
+
+## Target Users
+
+* Teachers
+* Educational institutions
+* Students
+* Beginners learning Python
+
+## Out of Scope
+
+The project currently does not support:
+
+* Database storage
+* User authentication
+* Attendance management
+* Web interfaces
+* PDF generation
 
 ## Project Overview
 
