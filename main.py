@@ -12,19 +12,20 @@ from utils import (
 )
 from student import SUBJECTS
 
+
 def menu():
     while True:   # LOOP concept
         print(
-    "\n--- Student System ---\n"
-    "1. Add Student\n"
-    "2. View Students\n"
-    "3. Edit Student\n"
-    "4. Delete Student\n"
-    "5. Find Topper\n"
-    "6. Sort Students\n"
-    "7. Summarize Results\n"
-    "8. Exit"
-)
+            "\n--- Student System ---\n"
+            "1. Add Student\n"
+            "2. View Students\n"
+            "3. Edit Student\n"
+            "4. Delete Student\n"
+            "5. Find Topper\n"
+            "6. Sort Students\n"
+            "7. Summarize Results\n"
+            "8. Exit"
+        )
         choice = input("Enter choice: ")
 
         if choice == "1":
@@ -38,24 +39,24 @@ def menu():
 
         elif choice == "3":
 
-           name = input("Student name: ")
+            name = input("Student name: ")
 
-           marks = list(
-               map(
-                   int,
-                   input(
-                     "New marks: "
+            marks = list(
+                map(
+                    int,
+                    input(
+                        "New marks: "
                     ).split()
                 )
-           )
+            )
 
-           if edit_student(name, marks):
+            if edit_student(name, marks):
 
-               print("Updated successfully")
+                print("Updated successfully")
 
-           else:
+            else:
 
-               print("Student not found")
+                print("Student not found")
         elif choice == "4":
 
             name = input("Student name: ")
@@ -68,31 +69,30 @@ def menu():
 
                 print("Student not found")
 
-
         elif choice == "5":
 
-             print(
-                  "Topper:",
-                  find_topper()
+            print(
+                "Topper:",
+                find_topper()
             )
 
         elif choice == "6":
 
-             sort_students()
+            sort_students()
 
-             print("Sorted!")
-        
+            print("Sorted!")
+
         elif choice == "7":
 
-             print(
+            print(
 
-                 summarize_results()
+                summarize_results()
 
             )
-             
+
         elif choice == "8":
 
-           break
-        
+            break
+
 
 menu()

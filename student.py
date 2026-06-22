@@ -22,6 +22,7 @@ def get_students():
 
     return students
 
+
 def delete_student(name):
 
     for student in students:
@@ -33,6 +34,7 @@ def delete_student(name):
             return True
 
     return False
+
 
 def edit_student(name, new_marks):
 
@@ -68,5 +70,5 @@ class StudentCollection:
 
     def __iter__(self):
 
-        return iter(self.students)  
+        return iter(self.students)
         return f"{self.student_id} {self.name}"

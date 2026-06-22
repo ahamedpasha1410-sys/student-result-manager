@@ -1,5 +1,6 @@
 from student import students
 
+
 def calculate_total(student):
     return sum(student["marks"])
 
@@ -22,6 +23,7 @@ def sort_students():
         for j in range(i + 1, n):
             if calculate_total(students[i]) < calculate_total(students[j]):
                 students[i], students[j] = students[j], students[i]  # SWAP
+
 
 class RankIterator:
 
@@ -46,7 +48,8 @@ class RankIterator:
         self.index += 1
 
         return student
-    
+
+
 def summarize_results():
 
     if not students:
@@ -85,6 +88,6 @@ def summarize_results():
 
         "Lowest Marks": lowest,
 
-        "Average": round(average,2)
+        "Average": round(average, 2)
 
-    }    
+    }
