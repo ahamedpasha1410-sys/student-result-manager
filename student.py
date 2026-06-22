@@ -23,6 +23,32 @@ def get_students():
     return students
 
 
+def delete_student(name):
+
+    for student in students:
+
+        if student["name"].lower() == name.lower():
+
+            students.remove(student)
+
+            return True
+
+    return False
+
+
+def edit_student(name, new_marks):
+
+    for student in students:
+
+        if student["name"].lower() == name.lower():
+
+            student["marks"] = new_marks
+
+            return True
+
+    return False
+
+
 class Student:
 
     def __init__(self, student_id, name):
@@ -44,5 +70,5 @@ class StudentCollection:
 
     def __iter__(self):
 
-        return iter(self.students)  
+        return iter(self.students)
         return f"{self.student_id} {self.name}"
